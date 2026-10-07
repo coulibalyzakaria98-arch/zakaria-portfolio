@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="ZAKSOFT GreenAI preview">
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g1)"/>
+  <circle cx="310" cy="240" r="150" fill="#22c55e" opacity="0.35"/>
+  <circle cx="860" cy="550" r="180" fill="#38bdf8" opacity="0.2"/>
+  <rect x="160" y="170" width="880" height="430" rx="36" fill="#0b1120" opacity="0.7" stroke="#4ade80" stroke-width="3"/>
+  <path d="M220 500C340 420 425 320 610 350c140 25 240 120 270 180" stroke="#34d399" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <circle cx="220" cy="500" r="18" fill="#86efac"/>
+  <circle cx="610" cy="350" r="18" fill="#86efac"/>
+  <circle cx="890" cy="530" r="18" fill="#86efac"/>
+  <text x="600" y="648" text-anchor="middle" fill="#f8fafc" font-size="78" font-family="Arial, sans-serif" letter-spacing="4">GREENAI</text>
+</svg>
