@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,18 +10,13 @@ import Certifications from './components/Certifications'
 import Engagements from './components/Engagements'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { LanguageProvider } from './context/LanguageProvider'
+import { ThemeProvider } from './context/themeProvider'
 
-function App() {
-  const [darkMode, setDarkMode] = useState(true)
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', darkMode)
-    document.documentElement.classList.toggle('light', !darkMode)
-  }, [darkMode])
-
+function AppContent() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
+      <Navbar />
       <main>
         <Hero />
         <About />
@@ -37,6 +31,16 @@ function App() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <AppContent />
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 

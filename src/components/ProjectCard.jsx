@@ -6,7 +6,7 @@ function ProjectCard({ project, onSelect }) {
 
   return (
     <article
-      className={`group overflow-hidden rounded-3xl border border-white/10 bg-slate-950/80 shadow-lg shadow-slate-950/30 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-emerald-950/25 ${hasDemo ? 'cursor-pointer' : ''}`}
+      className={`group overflow-hidden rounded-3xl border border-slate-200 bg-white/90 shadow-lg shadow-slate-200/60 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:shadow-emerald-200/60 dark:border-white/10 dark:bg-slate-950/80 dark:shadow-slate-950/30 dark:hover:shadow-emerald-950/25 ${hasDemo ? 'cursor-pointer' : ''}`}
       onClick={hasDemo ? () => onSelect(project) : undefined}
       role={hasDemo ? 'button' : undefined}
       tabIndex={hasDemo ? 0 : undefined}
@@ -28,7 +28,7 @@ function ProjectCard({ project, onSelect }) {
 
       <div className="p-6">
         <div className="mb-3 flex items-center justify-between gap-3">
-          <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-emerald-300">
+          <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-emerald-600 dark:text-emerald-300">
             {project.filterCategory}
           </span>
           {hasDemo && (
@@ -38,19 +38,19 @@ function ProjectCard({ project, onSelect }) {
                 event.stopPropagation()
                 onSelect(project)
               }}
-              className="inline-flex items-center gap-1 text-sm font-medium text-slate-300 transition hover:text-emerald-400"
+              className="inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400"
             >
               Détails <ArrowUpRight size={14} />
             </button>
           )}
         </div>
 
-        <h3 className="text-2xl font-semibold text-white">{project.title}</h3>
-        <p className="mt-3 text-sm leading-7 text-slate-300">{project.shortDescription}</p>
+        <h3 className="text-2xl font-semibold text-slate-900 dark:text-white">{project.title}</h3>
+        <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300">{project.shortDescription}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.technologies.slice(0, 4).map((tech) => (
-            <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">
+            <span key={tech} className="rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1 text-[11px] text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300">
               {tech}
             </span>
           ))}
@@ -63,7 +63,7 @@ function ProjectCard({ project, onSelect }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(event) => event.stopPropagation()}
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-300"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-emerald-400/60 hover:text-emerald-600 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:text-emerald-300"
             >
               Voir le projet
             </a>
@@ -75,7 +75,7 @@ function ProjectCard({ project, onSelect }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={(event) => event.stopPropagation()}
-              className="inline-flex rounded-full border border-white/10 p-2.5 text-slate-200 transition hover:border-emerald-400/60 hover:text-emerald-300"
+              className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-2.5 text-slate-600 transition hover:border-emerald-400/60 hover:text-emerald-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:text-emerald-300"
               aria-label={`Voir le dépôt GitHub de ${project.title}`}
             >
               <GitBranch size={16} />
@@ -89,14 +89,14 @@ function ProjectCard({ project, onSelect }) {
                 event.stopPropagation()
                 onSelect(project)
               }}
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-emerald-400/60 hover:text-emerald-300"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-emerald-400/60 hover:text-emerald-600 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:text-emerald-300"
             >
               Voir le projet
             </button>
           )}
 
           {hasDemo && !hasGithub && (
-            <span className="inline-flex rounded-full border border-white/10 bg-slate-900/80 p-2.5 text-slate-200">
+            <span className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-2.5 text-slate-600 dark:border-white/10 dark:bg-slate-900/80 dark:text-slate-200">
               <Globe size={16} />
             </span>
           )}

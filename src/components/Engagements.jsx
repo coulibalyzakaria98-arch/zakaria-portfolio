@@ -21,7 +21,7 @@ const engagements = [
 
 function Engagements() {
   return (
-    <section className="bg-slate-900/60 py-20">
+    <section className="bg-slate-100/70 py-20 dark:bg-slate-900/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -31,20 +31,20 @@ function Engagements() {
         >
           <div className="mb-10 max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">Impact</p>
-            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Au-delà du code</h2>
-            <p className="mt-4 text-base leading-8 text-slate-300">
+            <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Au-delà du code</h2>
+            <p className="mt-4 text-base leading-8 text-slate-700 dark:text-slate-300">
               Je m’intéresse aux technologies qui répondent à des problèmes concrets en Afrique, notamment dans l’emploi, l’éducation, l’environnement, l’entrepreneuriat et la gestion des crises.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {engagements.map((item) => (
-              <div key={item.title} className="rounded-3xl border border-white/10 bg-slate-950/75 p-6">
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-300">
+              <div key={item.title} className="rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-sm shadow-slate-200/50 dark:border-white/10 dark:bg-slate-950/75 dark:shadow-none">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-300">
                   ✦
                 </div>
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{item.description}</p>
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300">{item.description}</p>
               </div>
             ))}
           </div>

@@ -1,0 +1,137 @@
+export default {
+  nav: {
+    home: 'Início',
+    about: 'Sobre',
+    skills: 'Competências',
+    projects: 'Projetos',
+    experience: 'Experiência',
+    contact: 'Contato',
+    cv: 'Baixar meu CV',
+    language: 'Idioma',
+  },
+  buttons: {
+    viewProjects: 'Ver meus projetos',
+    downloadCv: 'Baixar meu CV',
+    viewProject: 'Ver projeto',
+    details: 'Detalhes',
+    demo: 'Ver demonstração',
+    github: 'GitHub',
+    viewProfile: 'Meu perfil',
+    viewRepo: 'Meu repositório',
+  },
+  hero: {
+    available: 'Disponível para novas oportunidades',
+    title: 'COULIBALY ZAKARIA',
+    role: 'Desenvolvedor Web · AI Builder · Consultor de TI · Empreendedor Digital',
+    description:
+      'Crio e desenvolvo soluções digitais inovadoras combinando desenvolvimento web, inteligência artificial e tecnologias modernas.',
+    projects: 'Ver meus projetos',
+    cv: 'Baixar meu CV',
+    badges: ['Desenvolvimento Web', 'Desenvolvimento com IA', 'Vibe Coding', 'Redes', 'Cybersecurity'],
+  },
+  about: {
+    label: 'Sobre',
+    title: 'Sobre mim',
+    paragraphs: [
+      'Apaixonado por tecnologias digitais e pela sua capacidade de resolver problemas concretos, desenvolvo soluções web e digitais enquanto exploro inteligência artificial, redes e cibersegurança.',
+      'Minha trajetória me levou a unir desenvolvimento, consultoria, inovação e empreendedorismo com um objetivo claro: criar ferramentas úteis, acessíveis e adaptadas às necessidades reais de usuários e organizações.',
+      'Tenho especial interesse em projetos que geram valor concreto, seja um produto digital, uma plataforma de serviços ou uma solução com impacto social e econômico.',
+    ],
+    profile: 'Perfil',
+    identity: ['Desenvolvedor', 'Consultor de TI', 'Empreendedor Digital', 'Apaixonado por inovação'],
+    cards: {
+      web: 'Web',
+      webSub: 'Desenvolvimento & interfaces',
+      ai: 'IA',
+      aiSub: 'Soluções inteligentes',
+      networks: 'Redes',
+      networksSub: 'Arquitetura & sistemas',
+      security: 'Segurança',
+      securitySub: 'Análise & vigilância',
+    },
+  },
+  skills: {
+    label: 'Competências',
+    title: 'Competências & áreas',
+  },
+  projects: {
+    label: 'Projetos',
+    title: 'Projetos & realizações',
+    featured: 'Projeto em destaque',
+    filterAll: 'Todos',
+    filterWeb: 'Web',
+    filterAi: 'IA',
+    filterEntrepreneurship: 'Empreendedorismo',
+    filterImpact: 'Impacto',
+    filterCyber: 'Redes / Cibersegurança',
+    modal: {
+      problem: 'Problema',
+      solution: 'Solução',
+      features: 'Funcionalidades',
+      technologies: 'Tecnologias',
+      results: 'Resultados',
+      close: 'Fechar projeto',
+    },
+  },
+  experience: {
+    label: 'Experiência',
+    title: 'Trajetória profissional',
+  },
+  education: {
+    label: 'Formação',
+    title: 'Educação',
+  },
+  certifications: {
+    label: 'Programas',
+    title: 'Certificações & programas',
+  },
+  engagements: {
+    label: 'Impacto',
+    title: 'Além do código',
+    intro:
+      'Interesso-me por tecnologias que respondem a problemas concretos na África, especialmente em emprego, educação, meio ambiente, empreendedorismo e gestão de crises.',
+  },
+  workflow: {
+    label: 'Método',
+    title: 'Meu método de criação',
+    intro:
+      'Uso a inteligência artificial como acelerador, não como substituto da compreensão técnica.',
+    summary: 'Human Creativity × AI × Engineering',
+    steps: [
+      { number: '01', title: 'IDEIA', text: 'Entender o problema e identificar a necessidade.' },
+      { number: '02', title: 'DESIGN', text: 'Definir a experiência do usuário e a arquitetura da solução.' },
+      { number: '03', title: 'AI-ASSISTED BUILD', text: 'Usar a IA de forma inteligente para acelerar o prototipagem e o desenvolvimento.' },
+      { number: '04', title: 'CÓDIGO & TESTE', text: 'Analisar, compreender, testar, corrigir e otimizar o código.' },
+      { number: '05', title: 'LANÇAMENTO', text: 'Implantar uma solução funcional e melhorar o produto com base no feedback.' },
+    ],
+  },
+  contact: {
+    label: 'Contato',
+    title: 'Vamos trabalhar juntos',
+    description: 'Você tem um projeto, oportunidade ou ideia para desenvolver? Fique à vontade para entrar em contato.',
+    email: 'Email',
+    whatsapp: 'WhatsApp',
+    linkedin: 'LinkedIn',
+    github: 'GitHub',
+    sendEmail: 'Enviar um email',
+    viewLinkedIn: 'Meu perfil',
+    viewGithub: 'Meu repositório',
+  },
+  footer: {
+    rights: '© 2026 Coulibaly Zakaria. Todos os direitos reservados.',
+  },
+  seo: {
+    title: 'Coulibaly Zakaria | Desenvolvedor Web · AI Builder · Consultor de TI',
+    description:
+      'Portfólio profissional de Coulibaly Zakaria, desenvolvedor web, AI Builder, consultor de TI e empreendedor digital especializado em desenvolvimento web, inteligência artificial, redes e cibersegurança.',
+  },
+  language: {
+    label: 'Idioma',
+    fr: 'Français',
+    en: 'English',
+    pt: 'Português',
+  },
+  switcher: {
+    ariaLabel: 'Escolher idioma',
+  },
+}

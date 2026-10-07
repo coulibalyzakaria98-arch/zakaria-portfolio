@@ -12,6 +12,17 @@
     <title>Coulibaly Zakaria | Développeur Web · AI Builder · IT Consultant · Entrepreneur Digital</title>
   </head>
   <body>
+    <script>
+      ;(() => {
+        const savedTheme = localStorage.getItem('portfolio-theme')
+        const preferredDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        const theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : preferredDark ? 'dark' : 'light'
+
+        document.documentElement.classList.toggle('dark', theme === 'dark')
+        document.documentElement.classList.toggle('light', theme === 'light')
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
