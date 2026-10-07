@@ -5,7 +5,7 @@ function Contact() {
   const { t } = useLanguage()
 
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <section id="contact" className="scroll-mt-24 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="rounded-[2rem] border border-emerald-400/20 bg-gradient-to-br from-white via-slate-50 to-white p-8 shadow-lg shadow-slate-200/50 sm:p-10 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:shadow-none">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div>

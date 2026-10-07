@@ -75,10 +75,10 @@ function WriteupsPage() {
                   <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
                     {content[0] || 'Contenu à compléter avec les détails techniques du writeup.'}
                   </p>
-                  <a href={item.slug ? `#${item.slug}` : '#'} className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-emerald-600 transition hover:text-emerald-500 dark:text-emerald-400">
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
                     {language === 'fr' ? 'Voir le writeup' : language === 'pt' ? 'Ver writeup' : 'View writeup'}
                     <ArrowUpRight size={16} />
-                  </a>
+                  </span>
                 </div>
               </div>
             </article>

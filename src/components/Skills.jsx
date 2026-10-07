@@ -6,7 +6,7 @@ function Skills() {
   const { t } = useLanguage()
 
   return (
-    <section id="skills" className="bg-slate-100/70 py-20 dark:bg-slate-900/60">
+    <section id="skills" className="scroll-mt-24 bg-slate-100/70 py-20 dark:bg-slate-900/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

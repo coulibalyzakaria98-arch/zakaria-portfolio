@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import { useLanguage } from '../context/useLanguage'
 import { projects } from '../data/projects'
 
 function ProjectsPage() {
+  const { t } = useLanguage()
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <motion.div
@@ -12,8 +15,8 @@ function ProjectsPage() {
         transition={{ duration: 0.4 }}
         className="mb-10 max-w-2xl"
       >
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">Projects</p>
-        <h1 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Portfolio projects</h1>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">{t.projects.label}</p>
+        <h1 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">{t.projects.title}</h1>
       </motion.div>
 
       <div className="grid gap-6 lg:grid-cols-2">

@@ -1,5 +1,6 @@
 import { ArrowRight, BriefcaseBusiness, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/useLanguage'
 
 function Hero() {
@@ -7,7 +8,7 @@ function Hero() {
   const highlights = t.hero.badges
 
   return (
-    <section id="home" className="relative overflow-hidden bg-transparent">
+    <section id="home" className="relative scroll-mt-24 overflow-hidden bg-transparent">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(34,197,94,0.18),_transparent_38%),radial-gradient(circle_at_right,_rgba(59,130,246,0.12),_transparent_30%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-24">
         <motion.div
@@ -38,13 +39,19 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#projects"
+            <Link
+              to="/#projects"
               className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400"
             >
               {t.buttons.viewProjects}
               <ArrowRight size={16} />
-            </a>
+            </Link>
+            <Link
+              to="/#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-emerald-400/60 hover:text-emerald-600 dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:text-emerald-300"
+            >
+              {t.buttons.contactMe}
+            </Link>
             <a
               href="/cv/CV%20ZAKARIA.pdf"
               download

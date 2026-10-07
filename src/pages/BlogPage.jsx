@@ -47,10 +47,10 @@ function BlogPage() {
                   {post.readingTime}
                 </div>
 
-                <a href="#" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-emerald-600 transition hover:text-emerald-500 dark:text-emerald-400">
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
                   {language === 'fr' ? 'Lire l’article' : language === 'pt' ? 'Ler artigo' : 'Read article'}
                   <ArrowUpRight size={16} />
-                </a>
+                </span>
               </div>
             </article>
           )

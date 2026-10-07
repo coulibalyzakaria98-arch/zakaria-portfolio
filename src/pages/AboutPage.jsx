@@ -4,8 +4,11 @@ import About from '../components/About'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Engagements from '../components/Engagements'
+import { useLanguage } from '../context/useLanguage'
 
 function AboutPage() {
+  const { t } = useLanguage()
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <About />
@@ -23,11 +26,11 @@ function AboutPage() {
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-400">CV</p>
-            <h2 className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">Download my resume</h2>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900 dark:text-white">{t.nav.cv}</h2>
           </div>
           <a href="/cv/CV%20ZAKARIA.pdf" download className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-medium text-slate-950 transition hover:bg-emerald-400">
             <Download size={18} />
-            Download CV
+            {t.nav.cv}
           </a>
         </div>
       </motion.div>

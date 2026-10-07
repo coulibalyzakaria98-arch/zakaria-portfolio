@@ -1,26 +1,66 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown, Download, Menu, Moon, Sun, X } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useLanguage } from '../context/useLanguage'
 import { useTheme } from '../context/useTheme'
+import { getSectionPath } from '../utils/navigation'
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme()
   const { t } = useLanguage()
+  const location = useLocation()
   const [open, setOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
+  const dropdownRef = useRef(null)
   const isDark = theme === 'dark'
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setMoreOpen(false)
+      }
+    }
+
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setMoreOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleEscape)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [])
+
   const navItems = [
-    { label: t.nav.home, to: '/' },
-    { label: t.nav.about, to: '/#about' },
-    { label: t.nav.skills, to: '/#skills' },
-    { label: t.nav.projects, to: '/projects' },
-    { label: t.nav.experience, to: '/#experience' },
-    { label: t.nav.contact, to: '/#contact' },
+    { label: t.nav.home, to: getSectionPath('home') },
+    { label: t.nav.about, to: getSectionPath('about') },
+    { label: t.nav.skills, to: getSectionPath('skills') },
+    { label: t.nav.projects, to: getSectionPath('projects') },
+    { label: t.nav.experience, to: getSectionPath('experience') },
+    { label: t.nav.contact, to: getSectionPath('contact') },
   ]
+
+  const isSectionActive = (to) => {
+    const targetHash = to?.replace(/^.*#/, '')
+    const currentHash = location.hash?.replace(/^#/, '')
+
+    if (to === '/') {
+      return location.pathname === '/' && !currentHash
+    }
+
+    if (!targetHash) {
+      return false
+    }
+
+    return location.pathname === '/' && currentHash === targetHash
+  }
 
   const moreItems = [
     { label: t.nav.writeups, to: '/writeups' },
@@ -29,8 +69,7 @@ function Navbar() {
     { label: t.nav.competitions, to: '/competitions' },
     { label: t.nav.progress, to: '/progress' },
     { label: t.nav.certifications, to: '/certifications' },
-    { label: t.nav.aboutPage, to: '/about' },
-    { label: t.nav.admin, to: '/admin' },
+    { label: t.nav.cvPage, to: '/cv' },
   ]
 
   return (
@@ -45,16 +84,23 @@ function Navbar() {
             <Link
               key={item.label}
               to={item.to}
-              className="text-sm text-slate-600 transition hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400"
+              aria-current={isSectionActive(item.to) ? 'page' : undefined}
+              className={
+                isSectionActive(item.to)
+                  ? 'text-sm transition text-emerald-600 dark:text-emerald-400'
+                  : 'text-sm transition text-slate-600 hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400'
+              }
             >
               {item.label}
             </Link>
           ))}
 
-          <div className="relative">
+          <div ref={dropdownRef} className="relative">
             <button
               type="button"
               onClick={() => setMoreOpen((previous) => !previous)}
+              aria-expanded={moreOpen}
+              aria-haspopup="menu"
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-emerald-500 hover:text-emerald-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:border-emerald-400/60 dark:hover:text-emerald-400"
             >
               {t.nav.more}

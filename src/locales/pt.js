@@ -13,6 +13,7 @@ export default {
     competitions: 'Competições',
     progress: 'Badges & Progressão',
     certifications: 'Certificações',
+    cvPage: 'CV',
     aboutPage: 'CV / Sobre',
     admin: 'Admin',
     cv: 'Baixar meu CV',
@@ -20,6 +21,7 @@ export default {
   },
   buttons: {
     viewProjects: 'Ver meus projetos',
+    contactMe: 'Entre em contato',
     downloadCv: 'Baixar meu CV',
     viewProject: 'Ver projeto',
     details: 'Detalhes',
