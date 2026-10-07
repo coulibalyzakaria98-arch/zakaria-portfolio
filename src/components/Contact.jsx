@@ -1,4 +1,4 @@
-import { ArrowRight, BriefcaseBusiness, GitBranch, Mail, MessageCircle } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, GitBranch, Globe, Mail, MessageCircle } from 'lucide-react'
 import { useLanguage } from '../context/useLanguage'
 
 function Contact() {
@@ -56,6 +56,17 @@ function Contact() {
                 <div>
                   <div className="text-sm text-slate-500 dark:text-slate-400">{t.contact.github}</div>
                   <div className="font-medium text-slate-900 dark:text-white">{t.contact.viewGithub}</div>
+                </div>
+              </div>
+              <ArrowRight size={16} />
+            </a>
+
+            <a href="https://web.facebook.com/zakaria.coulibaly.866947" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left transition hover:border-emerald-400/60 hover:text-emerald-600 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:text-emerald-300">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-300"><Globe size={18} /></span>
+                <div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">{t.contact.facebook}</div>
+                  <div className="font-medium text-slate-900 dark:text-white">{t.contact.viewFacebook}</div>
                 </div>
               </div>
               <ArrowRight size={16} />
